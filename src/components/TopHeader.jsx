@@ -1,6 +1,7 @@
 import moment from "moment";
 import logo from "/logo.png"
 import Marquee from "react-fast-marquee";
+import Navbar from "./Navbar";
 
 const TopHeader = () => {
     return (
@@ -14,6 +15,7 @@ const TopHeader = () => {
                     <p>Match Highlights: Germany vs Spain — as it happened   !   Match Highlights: Germany vs Spain as...</p>
                 </Marquee>
             </div>
+            <Navbar/>
         </header>
     );
 };
