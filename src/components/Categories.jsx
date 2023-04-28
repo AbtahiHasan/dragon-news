@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FaRegBookmark } from "react-icons/fa";
 import { BsShare, BsStarFill, BsEyeFill } from "react-icons/bs";
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import Rating from "react-rating";
 
 const Categories = () => {
@@ -45,22 +46,17 @@ const Categories = () => {
                             <div className="p-4">
                                 <p className="text-2xl font-bold my-6">{catagory.title}</p>
                                 <img className="w-full" src={catagory.image_url} alt="" />
-                                <p className="text-md text-gray-500 my-6">{catagory.details}</p>
+                                <p className="text-md text-gray-500 my-6">{catagory.details.length < 150 ? catagory.details : catagory.details.slice(0, 150) } <Link className="font-bold">  ...read more</Link></p>
                                 <hr />
                                 <div className="flex justify-between items-center">
                                     <div className="flex gap-2 mt-4 text-orange-500 items-center">
-                                        {/* <BsStarFill/>
-                                        <BsStarFill/>
-                                        <BsStarFill/>
-                                        <BsStarFill/>
-                                        <BsStarHalf/>
-                                        <p>4.9</p> */}
                                         <Rating
-                                            placeholderRating={3.5}
-                                            emptySymbol={<img src={<BsStarFill/>} className="icon" />}
-                                            placeholderSymbol={<img src={<BsStarFill/>} className="icon" />}
-                                            fullSymbol={<img src={<BsStarFill/>} className="icon" />}
+                                            placeholderRating={catagory.rating.number}
+                                            emptySymbol={<AiOutlineStar/>}
+                                            placeholderSymbol={<AiFillStar/>}
+                                            fullSymbol={<AiFillStar/>}
                                         />
+                                        <p>{catagory.rating.number}</p>
                                     </div>
                                     <div className="flex gap-2 items-center mt-4">
                                         <BsEyeFill />
