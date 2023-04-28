@@ -7,7 +7,7 @@ const Navbar = () => {
         <nav className='flex justify-center gap-3 items-center my-5'>
             <ul className='flex gap-3  mx-auto'>
                 <li>
-                    <Link to="category/0">Home</Link>
+                    <Link to="/categories/0">Home</Link>
                 </li>
                 <li>
                     <Link>About</Link>
