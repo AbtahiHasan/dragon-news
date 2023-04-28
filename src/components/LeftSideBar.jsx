@@ -7,9 +7,9 @@ const LeftSideBar = () => {
     return (
         <aside>
             <h3 className="font-bold text-lg">All Caterogy</h3>
-            <ul>
+            <ul className="mt-4">
                 {
-                    categories.map((category) => <li className="font-bold my-3" key={category.id}><NavLink to={`/categories/${category.id}`} style={{padding: "10px auto"}} className={({isActive}) => isActive ? "bg-[#E7E7E7] w-full rounded block" : ""}>{category.name}</NavLink></li>)
+                    categories.map((category) => <li className="font-bold " key={category.id}><NavLink to={`/categories/${category.id}`}  className={({isActive}) => isActive ? "bg-[#E7E7E7] w-full rounded block pl-7 py-3" : "pl-7 block py-3"}>{category.name}</NavLink></li>)
                 }
             </ul>
         </aside>
