@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import TopHeader from "../components/TopHeader";
 import Container from "../components/Container";
 import LeftSideBar from "../components/LeftSideBar";
+import RightSidebar from "../components/RightSidebar";
 
 const MainLayout = () => {
     return (
@@ -14,7 +15,9 @@ const MainLayout = () => {
                 <section className="col-span-3">
                     <Outlet/>
                 </section>
-                <section></section>
+                <section>
+                    <RightSidebar/>
+                </section>
             </main>
             
         </Container>
