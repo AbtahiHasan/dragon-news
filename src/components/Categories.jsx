@@ -46,11 +46,12 @@ const Categories = () => {
                             <div className="p-4">
                                 <p className="text-2xl font-bold my-6">{catagory.title}</p>
                                 <img className="w-full" src={catagory.image_url} alt="" />
-                                <p className="text-md text-gray-500 my-6">{catagory.details.length < 150 ? catagory.details : catagory.details.slice(0, 150) } <Link className="font-bold">  ...read more</Link></p>
+                                <p className="text-md text-gray-500 my-6">{catagory.details.length < 150 ? catagory.details : catagory.details.slice(0, 150) } <Link to={`/news/${catagory._id}`} className="font-bold">  ...read more</Link></p>
                                 <hr />
                                 <div className="flex justify-between items-center">
                                     <div className="flex gap-2 mt-4 text-orange-500 items-center">
                                         <Rating
+                                        readonly
                                             placeholderRating={catagory.rating.number}
                                             emptySymbol={<AiOutlineStar/>}
                                             placeholderSymbol={<AiFillStar/>}

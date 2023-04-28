@@ -8,7 +8,7 @@ const MainLayout = () => {
     return (
         <Container>
             <TopHeader/>
-            <main className="grid md:grid-cols-5">
+            <main className="md:grid md:grid-cols-5">
                 <section>
                     <LeftSideBar/>
                 </section>

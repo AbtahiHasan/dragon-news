@@ -39,9 +39,9 @@ const RightSidebar = () => {
 
             <div className="bg-[#F3F3F3] mt-8 p-[15px]">
                 <h3 className="font-bold text-lg">Q-Zone</h3>
-                <img className="mt-[20px]" src={qzone1} alt="" />
-                <img src={qzone2} alt="" />
-                <img src={qzone3} alt="" />
+                <img className="mt-[20px] w-full" src={qzone1} alt="" />
+                <img className="w-full" src={qzone2} alt="" />
+                <img className="w-full" src={qzone3} alt="" />
             </div>
 
             <div className="w-full h-[50vh] mt-8 relative">

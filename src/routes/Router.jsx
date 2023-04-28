@@ -6,6 +6,7 @@ import MainLayout from "../layouts/MainLayout";
 import Categories from "../components/Categories";
 import NewsLayout from "../layouts/NewsLayout";
 import News from "../components/News";
+import NewsDetails from "../pages/NewsDetails";
 
 const Router = createBrowserRouter([
     {
@@ -42,7 +43,7 @@ const Router = createBrowserRouter([
         children: [
             {
                 path: ":id",
-                element: <News/>
+                element: <NewsDetails/>
             }
         ]
     }
