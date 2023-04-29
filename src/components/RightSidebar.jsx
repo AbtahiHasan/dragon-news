@@ -29,6 +29,7 @@ const RightSidebar = () => {
             
             {/* table  */}
             <table className="rounded  border-[1px] w-full border-slate-200 mt-8">
+                <tbody>
                 <tr >
                     <td className="flex items-center gap-2 p-2 border-[1px] border-slate-200"><FaFacebook/> <p>Facebook</p></td>
                 </tr>
@@ -38,6 +39,8 @@ const RightSidebar = () => {
                 <tr>
                     <td className="flex items-center gap-2 p-2 border-[1px] border-slate-200"><AiFillInstagram/><p>Instagram</p></td>
                 </tr>
+                </tbody>
+                
             </table>
             {/* Q-Zone */}
 
