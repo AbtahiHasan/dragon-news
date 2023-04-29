@@ -6,20 +6,24 @@ import qzone2 from "/assets/qZone2.png"
 import qzone3 from "/assets/qZone3.png"
 import bg from "/assets/bg.png"
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthProvider";
+
 
 const RightSidebar = () => {
+    const {signInWithGoogle, signInWithGithub} = useAuth()
     return (
         <div>
+
             <h3 className="font-bold text-lg">Login With</h3>
 
-            <div className="flex items-center justify-center border p-2 rounded gap-2 mt-4">
+            <button onClick={signInWithGoogle} className="flex items-center justify-center border p-2 rounded w-full gap-2 mt-4">
                 <FcGoogle/>
                 <p>Login with Google</p>
-            </div>
-            <div className="flex items-center justify-center border p-2 rounded gap-2 mt-2">
+            </button>
+            <button onClick={signInWithGithub} className="flex items-center justify-center border p-2 rounded w-full gap-2 mt-2">
                 <AiFillGithub/>
                 <p>Login with Github</p>
-            </div>
+            </button>
 
             <h3 className="font-bold text-lg mt-8">Find Us On</h3>
             

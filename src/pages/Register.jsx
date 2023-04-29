@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
 import { useAuth } from '../context/AuthProvider';
 import { sendEmailVerification, updateProfile } from 'firebase/auth';
+import Container from '../components/Container';
+import Navbar from '../components/Navbar';
 
 const Register = () => {
     const {createUser, user, signInWithGoogle} = useAuth()
@@ -49,7 +51,12 @@ const Register = () => {
 
 
     return (
-        <section className='border rounded-xl p-[17px] max-w-[500px] mx-auto mt-1 shadow-3xl'>
+        <>
+            <Container>
+                <Navbar/>
+            </Container>
+
+            <section className='border rounded-xl p-[17px] max-w-[500px] mx-auto mt-1 shadow-3xl'>
             <h2 className='text-center text-2xl'>Sign Up</h2>
             <form onSubmit={hendleForm}>
                 <div className='flex flex-col my-3'>
@@ -70,14 +77,11 @@ const Register = () => {
                 </div>
                 <button type='submit' className='bg-[#ff99004c] w-full p-2 text-[19px] rounded mt-[10px]'>Sign Up</button>         
                 <p className='mt-[8px] text-center'>Already have an account? <Link to="/login" className='text-[#FF9900]'>Login</Link></p>     
-                <div className='flex items-center justify-between mt-[15px] '>
-                    <hr className='w-[45%] bg-[#95A0A7]'/>
-                    <p className='text-[#95A0A7]'>Or</p>
-                    <hr className='w-[45%] bg-[#95A0A7]'/>
-                </div>   
-                <button onClick={signInWithGoogle} className='p-[10px] border rounded w-full flex justify-center items-center gap-[6px] mt-[20px]'><FcGoogle className='text-[32px]'/><span>Continue with Google</span></button>
+
             </form>
         </section>
+        </>
+        
     );
 };
 

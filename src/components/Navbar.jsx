@@ -18,7 +18,7 @@ const Navbar = () => {
             </ul>
             <div className='flex items-center gap-3'>
                 <FaUserCircle className='text-2xl'/>
-                <button className='px-4 py-2 text-white rounded bg-[#403F3F]'><Link>Login</Link></button>
+                <button className='px-4 py-2 text-white rounded bg-[#403F3F]'><Link to="/login">Login</Link></button>
             </div>
         </nav>
     );
