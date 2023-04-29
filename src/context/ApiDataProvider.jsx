@@ -3,7 +3,7 @@ const DataContext = createContext()
 const ApiDataProvider = ({children}) => {
     const [categories, setCategories] = useState([])
     const getCategories = async () => {
-        const res = await fetch("http://localhost:3000/categories")
+        const res = await fetch("https://dragon-news-abtahihasan.vercel.app/categories")
         const data = await res.json()
         setCategories(data)
     }
